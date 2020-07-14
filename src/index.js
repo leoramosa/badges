@@ -7,13 +7,4 @@ import BadgeNew from "./pages/BadgeNew";
 
 const container = document.getElementById("app");
 
-ReactDOM.render(
-  <BadgeNew
-    firstName="leon"
-    lastName="ramon"
-    avatarUrl="https://www.gravatar.com/avatar?d=identicon"
-    jobTitle="Fronted Engisneer"
-    twitter="leoramosa"
-  />,
-  container
-);
+ReactDOM.render(<BadgeNew />, container);
