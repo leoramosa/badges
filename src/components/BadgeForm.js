@@ -1,18 +1,12 @@
 import React from "react";
 
 class BadgeForm extends React.Component {
-  state = {};
-  handleChange = (e) => {
-    console.log({ value: e.target.value });
-    console.log({
-      name: e.target.name,
-      value: e.target.value,
-    });
-
+  /* state = {}; */
+  /* handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
-  };
+  }; */
   handleClick = (e) => {
     console.log("button was clicked");
   };
@@ -33,7 +27,7 @@ class BadgeForm extends React.Component {
               onChange={this.props.onChange}
               className="form-control"
               type="text"
-              name="firsName"
+              name="firstName"
               value={this.props.formValues.firstName}
             />
           </div>
