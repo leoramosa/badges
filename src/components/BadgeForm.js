@@ -1,8 +1,41 @@
 import React from "react";
 
 class BadgeForm extends React.Component {
+  handleChange = (e) => {
+    /* console.log({ value: e.target.value }); */
+    console.log({
+      name: e.target.name,
+      value: e.target.value,
+    });
+  };
+  handleClick = (e) => {
+    console.log("button was clicked");
+  };
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("form was submitted");
+  };
+
   render() {
-    return <p>BadgeForm</p>;
+    return (
+      <div>
+        <h1>New Attendant</h1>
+        <form onSubmit={this.handleSubmit}>
+          <div className="">
+            <label htmlFor="">First Name</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="text"
+              name="firsName"
+            />
+          </div>
+          <button onClick={this.handleClick} className="btn btn-primary">
+            Save
+          </button>
+        </form>
+      </div>
+    );
   }
 }
 
