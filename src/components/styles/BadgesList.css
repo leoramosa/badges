@@ -1,0 +1,38 @@
+.Badgeslist__container {
+  padding: 10px;
+}
+
+.BadgesList__item {
+  display: flex;
+  padding: 15px;
+  background-color: white;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: #bbbbbb 3px 3px 6px;
+}
+
+.BadgesList__img {
+  padding-right: 20px;
+  align-items: center;
+  display: flex;
+}
+.BadgesList__img-container {
+  border-radius: 50%;
+}
+
+.Badges_Names {
+  font-weight: 800;
+  font-size: 21px;
+  margin-bottom: 0;
+}
+
+.Badges_twitter {
+  color: #0165ada6;
+  font-weight: 800;
+}
+
+.BadgesList__jobTitle {
+  color: #6d6d6d;
+  font-size: 16px;
+  margin-bottom: 0;
+}
