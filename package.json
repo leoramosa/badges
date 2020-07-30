@@ -12,10 +12,14 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "bootstrap": "^4.3.1",
     "firebase": "^7.17.1",
+    "md5": "^2.2.1",
     "react": "16.8.3",
     "react-dom": "16.8.3",
+    "react-loading-skeleton": "^2.1.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "2.1.5"
   },
