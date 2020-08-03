@@ -5,6 +5,7 @@ import confLogo from "../images/badge-header.svg";
 /* import Navbar from "../components/Navbar"; */
 import BadgesList from "../components/BadgesList";
 import PageLoading from "../components/PageLoading";
+import PageError from "../components/PageError";
 import { Link } from "react-router-dom";
 
 import api from "../api";
@@ -18,6 +19,7 @@ class Badges extends React.Component {
 
   componentDidMount() {
     this.fetchData();
+    setInterval(this.fetchData, 5000);
   }
 
   fetchData = async () => {
@@ -32,12 +34,12 @@ class Badges extends React.Component {
   };
 
   render() {
-    if (this.state.loading === true) {
+    if (this.state.loading === true && !this.state.data) {
       return <PageLoading />;
     }
 
     if (this.state.error) {
-      return `Error : ${this.state.error.message}`;
+      return <PageError error={this.state.error} />;
     }
 
     return (
@@ -67,6 +69,7 @@ class Badges extends React.Component {
           <div className="Badges__list">
             <div className="Badges__container">
               <BadgesList badges={this.state.data} />
+              {this.state.loading && "loading..."}
             </div>
           </div>
         </div>
